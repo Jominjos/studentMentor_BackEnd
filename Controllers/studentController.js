@@ -7,7 +7,7 @@ module.exports = {
     res.json(dbdata);
   },
   post: async (req, res) => {
-    const stuData = req.body;
+    const stuData = await studentModel.create(req.body);
     res.json(stuData);
   },
 };

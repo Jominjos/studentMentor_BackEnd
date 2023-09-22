@@ -1,9 +1,10 @@
-const bodyParser = require("body-parser");
+const bodyparser = require("body-parser");
 const express = require("express");
 const mongoose = require("mongoose");
 const app = express();
 const dotenv = require("dotenv");
 dotenv.config({ path: "./.env" });
+app.use(bodyparser.json());
 const cors = require("cors");
 const studentRouter = require("./Routes/student");
 const mentorRouter = require("./Routes/mentor");

@@ -6,6 +6,7 @@ module.exports = {
     res.json(dbdata);
   },
   post: async (req, res) => {
-    res.json({ message: "message from /mentor/post" });
+    const mentorData = await mentorModel.create(req.body);
+    res.json(mentorData);
   },
 };
