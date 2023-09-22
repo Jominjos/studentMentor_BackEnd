@@ -4,9 +4,14 @@ const mongoose = require("mongoose");
 const app = express();
 const dotenv = require("dotenv");
 dotenv.config({ path: "./.env" });
-
+const cors = require("cors");
 const studentRouter = require("./Routes/student");
 const mentorRouter = require("./Routes/mentor");
+app.use(
+  cors({
+    origin: "*",
+  })
+);
 
 main().catch((err) => {
   console.log(err);

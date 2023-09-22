@@ -11,7 +11,7 @@ const MentorSchema = new mongoose.Schema({
   },
   Students: [
     {
-      type: String,
+      type: mongoose.Schema.Types.ObjectId,
       ref: "StudentsModel",
     },
   ],

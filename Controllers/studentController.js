@@ -7,6 +7,7 @@ module.exports = {
     res.json(dbdata);
   },
   post: async (req, res) => {
-    res.json({ message: "from student post" });
+    const stuData = req.body;
+    res.json(stuData);
   },
 };
