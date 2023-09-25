@@ -10,4 +10,7 @@ module.exports = {
     const stuData = await studentModel.create(req.body);
     res.json(stuData);
   },
+  put: async (req, res) => {
+    res.json({ message: "student put" });
+  },
 };

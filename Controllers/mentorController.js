@@ -9,4 +9,7 @@ module.exports = {
     const mentorData = await mentorModel.create(req.body);
     res.json(mentorData);
   },
+  put: async (req, res) => {
+    res.json({ message: "mentor put" });
+  },
 };

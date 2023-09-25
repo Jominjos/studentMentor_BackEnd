@@ -8,6 +8,7 @@ app.use(bodyparser.json());
 const cors = require("cors");
 const studentRouter = require("./Routes/student");
 const mentorRouter = require("./Routes/mentor");
+const menstuRouter = require("./Routes/menstu");
 app.use(
   cors({
     origin: "*",
@@ -23,6 +24,7 @@ async function main() {
   console.log(`connected to db`);
   app.use("/student", studentRouter);
   app.use("/mentor", mentorRouter);
+  app.use("/menstu", menstuRouter);
 }
 
 app.listen(process.env.PORT_NUMBER || 5001, () => {
